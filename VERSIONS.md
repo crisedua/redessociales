@@ -1,34 +1,34 @@
-# Versions
+# Versiones
 
 ## 1.0.0 — 2026-04-22
 
-Initial release. 17 skills covering the full content system documented in the MarTech AI newsletter.
+Lanzamiento inicial. 17 skills que cubren el sistema de contenido completo documentado en el newsletter MarTech AI.
 
-**Voice foundation**
-- voice-builder
-- newsletter-voice
+**Base de voz**
+- constructor-de-voz
+- voz-de-newsletter
 
 **LinkedIn**
-- profile-optimizer
-- post-writer
-- graphic-designer
-- post-scorer
-- post-formatter
-- hook-generator
-- content-matrix
-- niche-research
-- gemini-infographic
-- gemini-carousel
-- quote-post
+- optimizador-de-perfil
+- redactor-de-publicaciones
+- disenador-grafico
+- evaluador-de-publicaciones
+- formateador-de-publicaciones
+- generador-de-ganchos
+- matriz-de-contenido
+- investigacion-de-nicho
+- infografia-gemini
+- carrusel-gemini
+- publicacion-con-cita
 
 **Instagram Reels**
-- reels-scripting
+- guiones-de-reels
 
 **YouTube**
-- youtube-thumbnail
+- miniatura-de-youtube
 
 **Community**
-- pinned-comment
+- comentario-fijado
 
 **Analytics**
-- analytics-dashboard
+- panel-de-analiticas

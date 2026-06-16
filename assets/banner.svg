@@ -8,7 +8,7 @@
       <stop offset="100%" stop-color="#00132F" stop-opacity="0.85"/>
     </linearGradient>
     <style>
-      .t-title { font: 700 76px 'Space Grotesk', 'Helvetica Neue', system-ui, sans-serif; fill: #FFFFFF; letter-spacing: -2px; }
+      .t-title { font: 700 60px 'Space Grotesk', 'Helvetica Neue', system-ui, sans-serif; fill: #FFFFFF; letter-spacing: -2px; }
       .t-sub   { font: 500 26px 'Space Grotesk', 'Helvetica Neue', system-ui, sans-serif; fill: #58B6FF; letter-spacing: -0.3px; }
       .t-meta  { font: 500 18px 'Space Grotesk', 'Helvetica Neue', system-ui, sans-serif; fill: #8FBEE8; letter-spacing: 0.5px; text-transform: uppercase; }
       .chip    { font: 600 18px 'Space Grotesk', 'Helvetica Neue', system-ui, sans-serif; fill: #FFFFFF; letter-spacing: 0.3px; }
@@ -20,9 +20,9 @@
   <rect width="1280" height="360" fill="url(#fade)"/>
 
   <g transform="translate(72, 92)">
-    <text class="t-meta" x="0" y="0">Claude Skills · by Charlie Hills</text>
-    <text class="t-title" x="0" y="78">Social Media Skills</text>
-    <text class="t-sub" x="0" y="130">The 17 skills behind 350k followers and 100M+ views a year</text>
+    <text class="t-meta" x="0" y="0">Skills de Claude · por Charlie Hills</text>
+    <text class="t-title" x="0" y="78">Skills de Redes Sociales</text>
+    <text class="t-sub" x="0" y="130">Las 17 skills detrás de 350k seguidores y más de 100M de vistas al año</text>
   </g>
 
   <g transform="translate(72, 280)">
@@ -40,7 +40,7 @@
     </g>
     <g transform="translate(386, 0)">
       <rect x="0" y="0" width="130" height="40" rx="20" fill="#FFD11A"/>
-      <text class="chip" x="65" y="26" text-anchor="middle" fill="#00132F">Analytics</text>
+      <text class="chip" x="65" y="26" text-anchor="middle" fill="#00132F">Analíticas</text>
     </g>
     <g transform="translate(528, 0)">
       <rect x="0" y="0" width="130" height="40" rx="20" fill="#DB8FFF"/>
@@ -53,6 +53,6 @@
     <circle cx="100" cy="100" r="70" fill="none" stroke="#58B6FF" stroke-width="2" stroke-dasharray="4 6"/>
     <circle cx="100" cy="100" r="42" fill="#58B6FF" opacity="0.15"/>
     <circle cx="100" cy="100" r="14" fill="#58B6FF"/>
-    <text class="t-meta" x="100" y="244" text-anchor="middle" fill="#8FBEE8">voice-builder · the foundation</text>
+    <text class="t-meta" x="100" y="244" text-anchor="middle" fill="#8FBEE8">constructor-de-voz · la base</text>
   </g>
 </svg>

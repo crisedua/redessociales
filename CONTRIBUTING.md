@@ -1,21 +1,21 @@
-# Contributing
+# Contribuir
 
-Thanks for your interest in improving these skills. This guide covers how to add new skills, improve existing ones, and submit changes.
+Gracias por tu interés en mejorar estas skills. Esta guía cubre cómo agregar nuevas skills, mejorar las existentes y enviar cambios.
 
-## Quick start
+## Inicio rápido
 
-1. Fork the repo
-2. Create a feature branch (`feat/new-skill-name` or `fix/skill-name-issue`)
-3. Make your changes
-4. Run `./validate-skills.sh` to check your changes against the spec
-5. Open a PR
+1. Haz un fork del repo
+2. Crea una rama de funcionalidad (`feat/new-skill-name` o `fix/skill-name-issue`)
+3. Haz tus cambios
+4. Ejecuta `./validate-skills.sh` para verificar tus cambios frente a la especificación
+5. Abre un PR
 
-## Adding a new skill
+## Agregar una nueva skill
 
-1. Create a new folder under `skills/` with a lowercase hyphenated name matching the skill's `name` field.
-2. Add a `SKILL.md` file with YAML frontmatter.
+1. Crea una nueva carpeta dentro de `skills/` con un nombre en minúsculas separado por guiones que coincida con el campo `name` de la skill.
+2. Agrega un archivo `SKILL.md` con frontmatter YAML.
 
-Minimum frontmatter:
+Frontmatter mínimo:
 
 ```yaml
 ---
@@ -25,7 +25,7 @@ description: >
 ---
 ```
 
-3. Write the skill body. Most skills follow this structure:
+3. Escribe el cuerpo de la skill. La mayoría de las skills siguen esta estructura:
 
 ```markdown
 # Skill Name
@@ -46,54 +46,54 @@ When this skill triggers, go straight to Step 1. Do not summarise. Start immedia
 [Non-negotiables. Voice rules, word limits, what never to do]
 ```
 
-4. Keep `SKILL.md` under 500 lines. Move reference material to `skills/my-new-skill/references/`.
-5. If the skill has templates or assets, put them in `skills/my-new-skill/assets/`.
-6. If the skill runs shell scripts, put them in `skills/my-new-skill/scripts/`.
+4. Mantén `SKILL.md` por debajo de las 500 líneas. Mueve el material de referencia a `skills/my-new-skill/references/`.
+5. Si la skill tiene plantillas o recursos, colócalos en `skills/my-new-skill/assets/`.
+6. Si la skill ejecuta scripts de shell, colócalos en `skills/my-new-skill/scripts/`.
 
-## Improving an existing skill
+## Mejorar una skill existente
 
-- Keep the YAML frontmatter name matching the folder name.
-- Do not break the skill's trigger phrases in the description. Others rely on them.
-- If you change the output format, update the `## Output` section in the skill.
-- Test the skill in your own Claude project before opening a PR.
+- Mantén el campo name del frontmatter YAML coincidiendo con el nombre de la carpeta.
+- No rompas las frases de activación de la skill en la descripción. Otros dependen de ellas.
+- Si cambias el formato de salida, actualiza la sección `## Output` en la skill.
+- Prueba la skill en tu propio proyecto de Claude antes de abrir un PR.
 
-## Style rules
+## Reglas de estilo
 
-These rules apply to every skill in the repo:
+Estas reglas aplican a todas las skills del repo:
 
-- British English throughout (spelling, "ise" not "ize")
-- Short sentences. No em dashes. No semicolons.
-- Never use: "leverage" (as a verb), "deep dive", "unlock", "game-changer", "groundbreaking"
-- Use AskUserQuestion for input gathering where a tool call is better than typing questions
-- Rules section at the bottom covers non-negotiables with "never" and "always" phrasing
-- Every skill that produces a file (like voice-builder writing `about-me.md`) states the exact filename and location
-- Every skill that depends on another skill's output checks for it before running
+- Español (Latinoamérica) en todo el texto (sin formas de España como "vosotros")
+- Oraciones cortas. Sin guiones largos (em dashes). Sin punto y coma.
+- Nunca uses muletillas de marketing vacías: "aprovechar/leverage" (como muletilla), "profundizar a fondo", "desbloquear", "revolucionario", "disruptivo", "rompedor"
+- Usa AskUserQuestion para recopilar inputs cuando una llamada a herramienta sea mejor que escribir preguntas
+- La sección de reglas al final cubre los aspectos no negociables con expresiones de "never" y "always"
+- Cada skill que produce un archivo (como constructor-de-voz que escribe `about-me.md`) indica el nombre de archivo y la ubicación exactos
+- Cada skill que depende de la salida de otra skill la verifica antes de ejecutarse
 
-## Naming conventions
+## Convenciones de nombres
 
-- Folder name = YAML `name` field = lowercase, hyphen-separated, no spaces
-- Skill names read as verb-object or noun phrases describing the output (`post-writer`, not `writing-posts`)
-- Keep names short. Three words max where possible.
+- Nombre de la carpeta = campo `name` del YAML = minúsculas, separado por guiones, sin espacios
+- Los nombres de skill se leen como verbo-objeto o frases nominales que describen la salida (`redactor-de-publicaciones`, no `writing-posts`)
+- Mantén los nombres cortos. Máximo tres palabras siempre que sea posible.
 
-## Testing locally
+## Probar localmente
 
-Copy your skill into Claude's skill directory:
+Copia tu skill al directorio de skills de Claude:
 
 ```bash
 cp -r skills/my-new-skill ~/.claude/skills/
 ```
 
-Then trigger it in a new Claude conversation with the phrases listed in the description. Confirm:
+Luego actívala en una nueva conversación de Claude con las frases listadas en la descripción. Confirma:
 
-- Claude picks up the skill on the trigger phrase
-- Inputs are collected correctly (AskUserQuestion renders)
-- Output matches the format in the skill
-- All external dependencies (Apify, Gemini, etc.) are checked before use
+- Claude detecta la skill al usar la frase de activación
+- Los inputs se recopilan correctamente (AskUserQuestion se renderiza)
+- La salida coincide con el formato de la skill
+- Todas las dependencias externas (Apify, Gemini, etc.) se verifican antes de usarse
 
-## Submitting a PR
+## Enviar un PR
 
-- Title: `feat: add [skill-name]` or `fix: [skill-name] [brief description]`
-- Body: describe what changed and why, include sample input/output if relevant
-- Link any related issue
+- Título: `feat: add [skill-name]` o `fix: [skill-name] [brief description]`
+- Cuerpo: describe qué cambió y por qué, incluye un input/output de ejemplo si es relevante
+- Enlaza cualquier issue relacionado
 
-Questions? Open a GitHub issue.
+¿Preguntas? Abre un issue en GitHub.

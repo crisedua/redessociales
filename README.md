@@ -2,32 +2,32 @@
   <img src="assets/banner.svg" alt="Social Media Skills by Charlie Hills" width="100%"/>
 </p>
 
-# Social Media Skills for AI Agents
+# Social Media Skills para agentes de IA
 
-The complete set of Claude skills behind Charlie Hills' content system. 350k+ followers across LinkedIn, Instagram, Substack, X and YouTube. 100m+ views per year. All running through one system that starts with the newsletter and flows out to every other channel.
+El conjunto completo de skills de Claude detrás del sistema de contenido de Charlie Hills. Más de 350k seguidores en LinkedIn, Instagram, Substack, X y YouTube. Más de 100m de visualizaciones al año. Todo funcionando a través de un solo sistema que comienza con el newsletter y fluye hacia todos los demás canales.
 
-Built by [Charlie Hills](https://charliehills.substack.com). Subscribe to the [MarTech AI newsletter](https://charliehills.substack.com) for weekly breakdowns of how this system works in practice.
+Creado por [Charlie Hills](https://charliehills.substack.com). Suscríbete al [newsletter MarTech AI](https://charliehills.substack.com) para recibir análisis semanales de cómo funciona este sistema en la práctica.
 
-**Contributions welcome.** Found a way to improve a skill? [Open a PR](https://github.com/charlie947/social-media-skills/pulls). Run into a problem? [Open an issue](https://github.com/charlie947/social-media-skills/issues).
+**Las contribuciones son bienvenidas.** ¿Encontraste una forma de mejorar una skill? [Abre un PR](https://github.com/charlie947/social-media-skills/pulls). ¿Te topaste con un problema? [Abre un issue](https://github.com/charlie947/social-media-skills/issues).
 
-## What are Skills?
+## ¿Qué son las Skills?
 
-Skills are markdown files that give AI agents specialised knowledge and workflows for specific tasks. When you install these in your project, Claude recognises when you're working on a social media task and applies the right patterns, voice rules, and platform constraints.
+Las skills son archivos markdown que les dan a los agentes de IA conocimiento y flujos de trabajo especializados para tareas específicas. Cuando las instalas en tu proyecto, Claude reconoce cuándo estás trabajando en una tarea de redes sociales y aplica los patrones, las reglas de voz y las restricciones de plataforma correctas.
 
-## How Skills Work Together
+## Cómo trabajan juntas las Skills
 
-Every skill reads shared context. The `voice-builder` skill is the foundation. Every other skill checks it first (via `about-me.md` and `voice.md`) before drafting a line.
+Cada skill lee un contexto compartido. La skill `constructor-de-voz` es la base. Todas las demás skills la consultan primero (a través de `about-me.md` y `voice.md`) antes de redactar una sola línea.
 
 ```
                     ┌──────────────────────────────────────┐
-                    │           voice-builder              │
+                    │           constructor-de-voz              │
                     │   about-me.md + voice.md             │
                     │   (read by every skill below)        │
                     └──────────────────┬───────────────────┘
                                        │
                     ┌──────────────────▼───────────────────┐
-                    │         newsletter-voice             │
-                    │   newsletter-voice.md                │
+                    │         voz-de-newsletter             │
+                    │   voz-de-newsletter.md                │
                     │   (the source every piece comes from)│
                     └──────────────────┬───────────────────┘
                                        │
@@ -37,45 +37,45 @@ Every skill reads shared context. The `voice-builder` skill is the foundation. E
 │ Profile  │ │LinkedIn  │ │ Video    │ │ Analytics &  │ │Community │ │Standalone│
 │          │ │ posts    │ │          │ │ Scoring      │ │          │ │          │
 ├──────────┤ ├──────────┤ ├──────────┤ ├──────────────┤ ├──────────┤ ├──────────┤
-│profile-  │ │post-     │ │reels-    │ │post-scorer   │ │pinned-   │ │hook-gen  │
+│profile-  │ │post-     │ │reels-    │ │evaluador-de-publicaciones   │ │pinned-   │ │hook-gen  │
 │ optimizer│ │ writer   │ │ scripting│ │              │ │ comment  │ │content-  │
 │          │ │graphic-  │ │youtube-  │ │analytics-    │ │          │ │ matrix   │
 │          │ │ designer │ │ thumbnail│ │ dashboard    │ │          │ │niche-    │
 │          │ │          │ │          │ │              │ │          │ │ research │
 │          │ │post-form │ │          │ │              │ │          │ │gemini-*  │
-│          │ │          │ │          │ │              │ │          │ │quote-post│
+│          │ │          │ │          │ │              │ │          │ │publicacion-con-cita│
 └──────────┘ └──────────┘ └──────────┘ └──────────────┘ └──────────┘ └──────────┘
 ```
 
-See each skill's `SKILL.md` for trigger phrases, inputs, and dependencies.
+Consulta el `SKILL.md` de cada skill para ver las frases de activación, los inputs y las dependencias.
 
-## Available Skills
+## Skills disponibles
 
 <!-- SKILLS:START -->
-| Skill | Description |
+| Skill | Descripción |
 |---|---|
-| [voice-builder](skills/voice-builder/) | Build `about-me.md` and `voice.md` from an interview plus 3 to 5 writing samples. The foundation every other skill reads. |
-| [newsletter-voice](skills/newsletter-voice/) | Add newsletter-specific writing instructions on top of voice-builder. Produces `newsletter-voice.md`. |
-| [profile-optimizer](skills/profile-optimizer/) | Rebuild a LinkedIn profile for conversions. Headline, about, experience, featured section, plus 4 image generation prompts. |
-| [post-writer](skills/post-writer/) | Draft LinkedIn posts in your voice using the voice files. |
-| [graphic-designer](skills/graphic-designer/) | Pick between HTML/CSS graphic and AI-generated infographic based on the post content. |
-| [post-scorer](skills/post-scorer/) | Pull your post history via Apify and score any draft against what actually performs for you. |
-| [reels-scripting](skills/reels-scripting/) | Reverse-engineer an outlier Reel via Apify + Gemini 2.5 Flash. Write a new script in your voice from your newsletter. |
-| [youtube-thumbnail](skills/youtube-thumbnail/) | Turn a video title into a branded YouTube thumbnail prompt for Gemini. |
-| [pinned-comment](skills/pinned-comment/) | Meme-style pinned comments with a matching image generation prompt. |
-| [hook-generator](skills/hook-generator/) | 6 clickbait-style two-line hook variations per topic. |
-| [post-formatter](skills/post-formatter/) | Topic to ready-to-publish post using PAS, AIDA, BAB, STAR, or SLAY. |
-| [content-matrix](skills/content-matrix/) | Pair your pillars with 8 formats for 32+ post ideas in one table. Justin Welsh style. |
-| [niche-research](skills/niche-research/) | Drive Claude for Chrome to scroll Reddit, X, and Google with verified dates. Surfaces the 20 most relevant stories in your niche from the last 7 days. |
-| [gemini-infographic](skills/gemini-infographic/) | The whiteboard style that pulled 480k impressions from 3 posts. |
-| [gemini-carousel](skills/gemini-carousel/) | Slide-by-slide carousel generator with an approval gate. |
-| [quote-post](skills/quote-post/) | Claude writes the quote, Gemini recreates the image with the quote baked in. |
-| [analytics-dashboard](skills/analytics-dashboard/) | LinkedIn Analytics export to interactive React dashboard plus 5 data-backed recommendations. |
+| [constructor-de-voz](skills/constructor-de-voz/) | Construye `about-me.md` y `voice.md` a partir de una entrevista más 3 a 5 muestras de escritura. La base que leen todas las demás skills. |
+| [voz-de-newsletter](skills/voz-de-newsletter/) | Agrega instrucciones de escritura específicas para el newsletter sobre constructor-de-voz. Produce `voz-de-newsletter.md`. |
+| [optimizador-de-perfil](skills/optimizador-de-perfil/) | Reconstruye un perfil de LinkedIn para conversiones. Titular, acerca de, experiencia, sección destacada, más 4 prompts de generación de imágenes. |
+| [redactor-de-publicaciones](skills/redactor-de-publicaciones/) | Redacta publicaciones de LinkedIn en tu voz usando los archivos de voz. |
+| [disenador-grafico](skills/disenador-grafico/) | Elige entre un gráfico HTML/CSS y una infografía generada con IA según el contenido de la publicación. |
+| [evaluador-de-publicaciones](skills/evaluador-de-publicaciones/) | Obtiene tu historial de publicaciones a través de Apify y evalúa cualquier borrador frente a lo que realmente te funciona. |
+| [guiones-de-reels](skills/guiones-de-reels/) | Realiza ingeniería inversa de un Reel destacado (outlier) con Apify + Gemini 2.5 Flash. Escribe un nuevo guion en tu voz a partir de tu newsletter. |
+| [miniatura-de-youtube](skills/miniatura-de-youtube/) | Convierte el título de un video en un prompt de miniatura de YouTube con tu marca para Gemini. |
+| [comentario-fijado](skills/comentario-fijado/) | Comentarios fijados estilo meme con un prompt de generación de imagen a juego. |
+| [generador-de-ganchos](skills/generador-de-ganchos/) | 6 variaciones de gancho de dos líneas estilo clickbait por tema. |
+| [formateador-de-publicaciones](skills/formateador-de-publicaciones/) | De un tema a una publicación lista para publicar usando PAS, AIDA, BAB, STAR o SLAY. |
+| [matriz-de-contenido](skills/matriz-de-contenido/) | Combina tus pilares con 8 formatos para obtener más de 32 ideas de publicaciones en una sola tabla. Estilo Justin Welsh. |
+| [investigacion-de-nicho](skills/investigacion-de-nicho/) | Dirige a Claude for Chrome para recorrer Reddit, X y Google con fechas verificadas. Saca a la luz las 20 historias más relevantes de tu nicho de los últimos 7 días. |
+| [infografia-gemini](skills/infografia-gemini/) | El estilo pizarra que logró 480k impresiones con 3 publicaciones. |
+| [carrusel-gemini](skills/carrusel-gemini/) | Generador de carrusel diapositiva por diapositiva con una etapa de aprobación. |
+| [publicacion-con-cita](skills/publicacion-con-cita/) | Claude escribe la cita, Gemini recrea la imagen con la cita integrada. |
+| [panel-de-analiticas](skills/panel-de-analiticas/) | De una exportación de LinkedIn Analytics a un dashboard interactivo de React más 5 recomendaciones respaldadas por datos. |
 <!-- SKILLS:END -->
 
-## Installation
+## Instalación
 
-### Option 1: Claude Code plugin marketplace
+### Opción 1: Marketplace de plugins de Claude Code
 
 ```bash
 # Add the marketplace
@@ -85,109 +85,109 @@ See each skill's `SKILL.md` for trigger phrases, inputs, and dependencies.
 /plugin install social-media-skills
 ```
 
-### Option 2: Clone and copy
+### Opción 2: Clonar y copiar
 
 ```bash
 git clone https://github.com/charlie947/social-media-skills.git
 cp -r social-media-skills/skills/* ~/.claude/skills/
 ```
 
-### Option 3: Individual skill upload (Claude Desktop)
+### Opción 3: Subir una skill individual (Claude Desktop)
 
-Download any skill folder, zip it, and upload via Customise skills in Claude.
+Descarga cualquier carpeta de skill, comprímela en un zip y súbela a través de Customise skills en Claude.
 
 ```bash
 cd social-media-skills/skills
-zip -r voice-builder.skill voice-builder
-# Upload voice-builder.skill through Customise skills in the Claude app
+zip -r constructor-de-voz.skill constructor-de-voz
+# Upload constructor-de-voz.skill through Customise skills in the Claude app
 ```
 
-### Option 4: Git submodule
+### Opción 4: Submódulo de Git
 
 ```bash
 git submodule add https://github.com/charlie947/social-media-skills.git .agents/social-media-skills
 ```
 
-Then reference skills from `.agents/social-media-skills/skills/`.
+Luego referencia las skills desde `.agents/social-media-skills/skills/`.
 
-### Option 5: Fork and customise
+### Opción 5: Hacer fork y personalizar
 
-Fork the repo, swap the voice rules for your own, and clone your fork into your projects.
+Haz un fork del repo, reemplaza las reglas de voz por las tuyas y clona tu fork en tus proyectos.
 
-## Usage
+## Uso
 
-Run `voice-builder` first. Every other skill needs `about-me.md` and `voice.md` to work properly.
+Ejecuta `constructor-de-voz` primero. Todas las demás skills necesitan `about-me.md` y `voice.md` para funcionar correctamente.
 
-Once installed, ask Claude to help with content tasks and it will pick the right skill:
+Una vez instaladas, pídele a Claude que te ayude con tareas de contenido y elegirá la skill correcta:
 
 ```
-"Build my voice" → voice-builder
-"Write me a post about AI agents" → post-writer
-"Score this draft against my history" → post-scorer
-"Make me a carousel from this" → gemini-carousel
-"What should I post this week" → niche-research or content-matrix
-"Turn this outlier Reel into a script" → reels-scripting
-"I need a thumbnail for 'How I fired my team'" → youtube-thumbnail
-"Write me a pinned comment" → pinned-comment
+"Construye mi voz" → constructor-de-voz
+"Escríbeme una publicación sobre agentes de IA" → redactor-de-publicaciones
+"Evalúa este borrador frente a mi historial" → evaluador-de-publicaciones
+"Hazme un carrusel a partir de esto" → carrusel-gemini
+"Qué debería publicar esta semana" → investigacion-de-nicho o matriz-de-contenido
+"Convierte este Reel destacado en un guion" → guiones-de-reels
+"Necesito una miniatura para 'Cómo despedí a mi equipo'" → miniatura-de-youtube
+"Escríbeme un comentario fijado" → comentario-fijado
 ```
 
-## Skill Categories
+## Categorías de Skills
 
-### Voice foundation
-- `voice-builder` — interview + sample analysis, writes about-me.md and voice.md
-- `newsletter-voice` — newsletter-specific writing rules on top of voice-builder
+### Base de voz
+- `constructor-de-voz` — entrevista + análisis de muestras, escribe about-me.md y voice.md
+- `voz-de-newsletter` — reglas de escritura específicas para el newsletter sobre constructor-de-voz
 
 ### LinkedIn
-- `profile-optimizer` — full profile rebuild
-- `post-writer` — drafts in your voice
-- `graphic-designer` — HTML/CSS graphic or AI infographic, auto-selected
-- `post-formatter` — topic to post via named framework (PAS, AIDA, BAB, STAR, SLAY)
-- `hook-generator` — 6 hook variations per topic
-- `post-scorer` — scores drafts against your post history
-- `content-matrix` — pillars x formats ideation
-- `niche-research` — 7-day niche research via Claude for Chrome
-- `gemini-infographic` — whiteboard style for Gemini
-- `gemini-carousel` — slide-by-slide carousel
-- `quote-post` — two-step quote workflow
+- `optimizador-de-perfil` — reconstrucción completa del perfil
+- `redactor-de-publicaciones` — borradores en tu voz
+- `disenador-grafico` — gráfico HTML/CSS o infografía con IA, seleccionado automáticamente
+- `formateador-de-publicaciones` — de un tema a una publicación mediante un framework con nombre (PAS, AIDA, BAB, STAR, SLAY)
+- `generador-de-ganchos` — 6 variaciones de gancho por tema
+- `evaluador-de-publicaciones` — evalúa borradores frente a tu historial de publicaciones
+- `matriz-de-contenido` — ideación de pilares x formatos
+- `investigacion-de-nicho` — investigación de nicho de 7 días a través de Claude for Chrome
+- `infografia-gemini` — estilo pizarra para Gemini
+- `carrusel-gemini` — carrusel diapositiva por diapositiva
+- `publicacion-con-cita` — flujo de trabajo de cita en dos pasos
 
 ### Instagram Reels
-- `reels-scripting` — Apify + Gemini 2.5 Flash reference analysis, newsletter-aligned script
+- `guiones-de-reels` — análisis de referencia con Apify + Gemini 2.5 Flash, guion alineado con el newsletter
 
 ### YouTube
-- `youtube-thumbnail` — title to Gemini thumbnail prompt
+- `miniatura-de-youtube` — de un título a un prompt de miniatura para Gemini
 
 ### Community
-- `pinned-comment` — meme-style pin + image prompt
+- `comentario-fijado` — fijado estilo meme + prompt de imagen
 
 ### Analytics
-- `analytics-dashboard` — LinkedIn export to dashboard + 5 recommendations
+- `panel-de-analiticas` — de una exportación de LinkedIn a un dashboard + 5 recomendaciones
 
-## Prerequisites
+## Requisitos previos
 
-A few skills need external services. Set these environment variables before use:
+Algunas skills necesitan servicios externos. Configura estas variables de entorno antes de usarlas:
 
-| Variable | Needed for |
+| Variable | Necesaria para |
 |---|---|
-| `APIFY_API_TOKEN` | post-scorer, reels-scripting |
-| `GOOGLE_AI_API_KEY` | reels-scripting (Gemini 2.5 Flash video analysis) |
+| `APIFY_API_TOKEN` | evaluador-de-publicaciones, guiones-de-reels |
+| `GOOGLE_AI_API_KEY` | guiones-de-reels (análisis de video con Gemini 2.5 Flash) |
 
-Set them with:
+Configúralas con:
 
 ```bash
 export APIFY_API_TOKEN=your_token
 export GOOGLE_AI_API_KEY=your_key
 ```
 
-The image generation skills (`gemini-infographic`, `gemini-carousel`, `quote-post`, `youtube-thumbnail`, `profile-optimizer`) output ready-to-paste prompts. You run them in a separate Gemini chat with Create Image enabled. No API key needed.
+Las skills de generación de imágenes (`infografia-gemini`, `carrusel-gemini`, `publicacion-con-cita`, `miniatura-de-youtube`, `optimizador-de-perfil`) generan prompts listos para pegar. Los ejecutas en un chat de Gemini aparte con Create Image habilitado. No se necesita ninguna API key.
 
-## Contributing
+## Contribuir
 
-PRs and issues welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding or improving skills.
+Los PRs e issues son bienvenidos. Consulta [CONTRIBUTING.md](CONTRIBUTING.md) para conocer las pautas sobre cómo agregar o mejorar skills.
 
-Run `./validate-skills.sh` before submitting to check your skill against the spec.
+Ejecuta `./validate-skills.sh` antes de enviar para verificar tu skill frente a la especificación.
 
-## License
+## Licencia
 
-[MIT](LICENSE). Use these however you like. If they help you, a link back to the [newsletter](https://charliehills.substack.com) is appreciated.
+[MIT](LICENSE). Úsalas como quieras. Si te ayudan, se agradece un enlace de vuelta al [newsletter](https://charliehills.substack.com).
 
 — Charlie

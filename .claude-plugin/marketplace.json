@@ -8,20 +8,20 @@
     {
       "name": "social-media-skills",
       "source": ".",
-      "description": "The complete set of Claude skills behind Charlie Hills' content system. 350k+ followers across LinkedIn, Instagram, Substack, X and YouTube. 100m+ views per year. 18 skills covering voice, LinkedIn, Instagram Reels, YouTube thumbnails, analytics, and community.",
+      "description": "El conjunto completo de skills de Claude detrás del sistema de contenido de Charlie Hills. Más de 350k seguidores en LinkedIn, Instagram, Substack, X y YouTube. Más de 100m de visualizaciones al año. 18 skills que cubren voz, LinkedIn, Instagram Reels, miniaturas de YouTube, analytics y comunidad.",
       "version": "1.0.0",
       "metadata": {
         "categories": [
-          "voice",
+          "voz",
           "linkedin",
           "reels",
           "youtube",
           "analytics",
-          "community"
+          "comunidad"
         ],
         "tags": [
-          "content creation",
-          "linkedin growth",
+          "creación de contenido",
+          "crecimiento en LinkedIn",
           "instagram reels",
           "infographics",
           "gemini",
