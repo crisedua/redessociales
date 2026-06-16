@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Social Media Skills by Charlie Hills" width="100%"/>
+  <img src="assets/banner.svg" alt="Skills de Redes Sociales por Charlie Hills" width="100%"/>
 </p>
 
-# Social Media Skills para agentes de IA
+# Skills de Redes Sociales para agentes de IA
 
 El conjunto completo de skills de Claude detrás del sistema de contenido de Charlie Hills. Más de 350k seguidores en LinkedIn, Instagram, Substack, X y YouTube. Más de 100m de visualizaciones al año. Todo funcionando a través de un solo sistema que comienza con el newsletter y fluye hacia todos los demás canales.
 
@@ -19,32 +19,26 @@ Las skills son archivos markdown que les dan a los agentes de IA conocimiento y 
 Cada skill lee un contexto compartido. La skill `constructor-de-voz` es la base. Todas las demás skills la consultan primero (a través de `about-me.md` y `voice.md`) antes de redactar una sola línea.
 
 ```
-                    ┌──────────────────────────────────────┐
-                    │           constructor-de-voz              │
-                    │   about-me.md + voice.md             │
-                    │   (read by every skill below)        │
-                    └──────────────────┬───────────────────┘
-                                       │
-                    ┌──────────────────▼───────────────────┐
-                    │         voz-de-newsletter             │
-                    │   voz-de-newsletter.md                │
-                    │   (the source every piece comes from)│
-                    └──────────────────┬───────────────────┘
-                                       │
-     ┌────────────┬────────────┬───────┴───────┬────────────┬────────────┐
-     ▼            ▼            ▼               ▼            ▼            ▼
-┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────┐ ┌──────────┐ ┌──────────┐
-│ Profile  │ │LinkedIn  │ │ Video    │ │ Analytics &  │ │Community │ │Standalone│
-│          │ │ posts    │ │          │ │ Scoring      │ │          │ │          │
-├──────────┤ ├──────────┤ ├──────────┤ ├──────────────┤ ├──────────┤ ├──────────┤
-│profile-  │ │post-     │ │reels-    │ │evaluador-de-publicaciones   │ │pinned-   │ │hook-gen  │
-│ optimizer│ │ writer   │ │ scripting│ │              │ │ comment  │ │content-  │
-│          │ │graphic-  │ │youtube-  │ │analytics-    │ │          │ │ matrix   │
-│          │ │ designer │ │ thumbnail│ │ dashboard    │ │          │ │niche-    │
-│          │ │          │ │          │ │              │ │          │ │ research │
-│          │ │post-form │ │          │ │              │ │          │ │gemini-*  │
-│          │ │          │ │          │ │              │ │          │ │publicacion-con-cita│
-└──────────┘ └──────────┘ └──────────┘ └──────────────┘ └──────────┘ └──────────┘
+   constructor-de-voz   (about-me.md + voice.md)
+            │   la base que leen todas las demás skills
+            ▼
+   voz-de-newsletter   (voz-de-newsletter.md)
+            │   la fuente de la que sale cada pieza de contenido
+            ▼
+   ┌─ Perfil ............. optimizador-de-perfil
+   │
+   ├─ Posts de LinkedIn .. redactor-de-publicaciones · disenador-grafico ·
+   │                       formateador-de-publicaciones · generador-de-ganchos ·
+   │                       matriz-de-contenido · investigacion-de-nicho ·
+   │                       infografia-gemini · carrusel-gemini · publicacion-con-cita
+   │
+   ├─ Video .............. guiones-de-reels
+   │
+   ├─ YouTube ............ miniatura-de-youtube
+   │
+   ├─ Analíticas ........ evaluador-de-publicaciones · panel-de-analiticas
+   │
+   └─ Comunidad ......... comentario-fijado
 ```
 
 Consulta el `SKILL.md` de cada skill para ver las frases de activación, los inputs y las dependencias.
@@ -78,10 +72,10 @@ Consulta el `SKILL.md` de cada skill para ver las frases de activación, los inp
 ### Opción 1: Marketplace de plugins de Claude Code
 
 ```bash
-# Add the marketplace
+# Agrega el marketplace
 /plugin marketplace add charlie947/social-media-skills
 
-# Install the plugin
+# Instala el plugin
 /plugin install social-media-skills
 ```
 
@@ -99,7 +93,7 @@ Descarga cualquier carpeta de skill, comprímela en un zip y súbela a través d
 ```bash
 cd social-media-skills/skills
 zip -r constructor-de-voz.skill constructor-de-voz
-# Upload constructor-de-voz.skill through Customise skills in the Claude app
+# Sube constructor-de-voz.skill a través de Customise skills en la app de Claude
 ```
 
 ### Opción 4: Submódulo de Git
@@ -156,10 +150,10 @@ Una vez instaladas, pídele a Claude que te ayude con tareas de contenido y eleg
 ### YouTube
 - `miniatura-de-youtube` — de un título a un prompt de miniatura para Gemini
 
-### Community
+### Comunidad
 - `comentario-fijado` — fijado estilo meme + prompt de imagen
 
-### Analytics
+### Analíticas
 - `panel-de-analiticas` — de una exportación de LinkedIn a un dashboard + 5 recomendaciones
 
 ## Requisitos previos
