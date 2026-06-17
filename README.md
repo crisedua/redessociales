@@ -108,19 +108,19 @@ Haz un fork del repo, reemplaza las reglas de voz por las tuyas y clona tu fork 
 
 ## Uso
 
-Ejecuta `/constructor-de-voz` primero. Todas las demás skills necesitan `about-me.md` y `voice.md` para funcionar correctamente.
+Pide *"construye mi voz"* primero. Todas las demás skills necesitan `about-me.md` y `voice.md` para funcionar correctamente.
 
-Cada skill se llama con un comando de barra. Escribe `/` en el chat para ver la lista, o escribe el nombre directamente:
+Una vez instaladas, pídele a Claude en español lo que necesites y elegirá la skill correcta:
 
 ```
-/constructor-de-voz          → construye tu voz (empieza aquí)
-/redactor-de-publicaciones   → escribe una publicación en tu voz
-/evaluador-de-publicaciones  → evalúa un borrador frente a tu historial
-/carrusel-gemini             → crea un carrusel
-/investigacion-de-nicho      → ideas: qué publicar esta semana
-/guiones-de-reels            → convierte un Reel en un guion
-/miniatura-de-youtube        → crea una miniatura para un video
-/comentario-fijado           → escribe un comentario fijado
+"Construye mi voz" → constructor-de-voz
+"Escríbeme una publicación sobre agentes de IA" → redactor-de-publicaciones
+"Evalúa este borrador frente a mi historial" → evaluador-de-publicaciones
+"Hazme un carrusel a partir de esto" → carrusel-gemini
+"Qué debería publicar esta semana" → investigacion-de-nicho o matriz-de-contenido
+"Convierte este Reel destacado en un guion" → guiones-de-reels
+"Necesito una miniatura para 'Cómo despedí a mi equipo'" → miniatura-de-youtube
+"Escríbeme un comentario fijado" → comentario-fijado
 ```
 
 Consulta **[COMO-USAR.md](COMO-USAR.md)** para la guía completa de uso.
