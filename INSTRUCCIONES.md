@@ -1,31 +1,45 @@
 # 📦 Cómo instalar las Skills de Redes Sociales en Claude Desktop
 
-Esta guía explica cómo descargar las skills e instalarlas en **Claude Desktop**
-(la app de escritorio para Mac/Windows).
+Hay dos formas de instalarlas. La **Opción A (plugin)** es la más rápida porque
+instala las 17 skills de una sola vez.
 
-## 1. Descarga las skills
+---
 
-**Opción rápida (todas a la vez):**
-- Ve a la carpeta [`dist/`](dist/) de este repositorio → abre **`todas-las-skills.zip`** → botón **Download**.
-- Descomprime el archivo. Obtendrás 17 archivos `.zip`, uno por skill.
+## ✅ Opción A — Subir como plugin (recomendada)
 
-**Opción individual (solo las que quieras):**
-- En [`dist/`](dist/), haz clic en la skill que necesites (por ejemplo `constructor-de-voz.zip`) → **Download**.
+Instala todas las skills juntas con un solo archivo.
 
-## 2. Súbelas a Claude Desktop
+1. Descarga **[`dist/redes-sociales-plugin.zip`](dist/redes-sociales-plugin.zip)**
+   desde este repositorio (ábrelo y usa el botón **Download**).
+2. Abre **Claude Desktop** → **Configuración (Settings)** → **Plugins**.
+3. Ve a la pestaña **Local uploads** y haz clic en **+** → **Upload local plugin**.
+4. Selecciona el archivo `redes-sociales-plugin.zip` y haz clic en **Upload**.
+5. Acepta el aviso de confianza. ¡Listo! Las 17 skills quedan disponibles.
 
-1. Abre **Claude Desktop**.
-2. Ve a **Configuración (Settings)** → **Capacidades (Capabilities)** → **Skills**.
-3. Haz clic en **Subir skill (Upload skill)** o en el botón **+**.
-4. Selecciona uno de los archivos `.zip`.
-5. Repite para cada skill (Claude Desktop sube **una skill por archivo**).
+> ⚠️ Sube el archivo `redes-sociales-plugin.zip` tal cual. No subas
+> `todas-las-skills.zip` ni un zip que contenga otros zips adentro: Claude
+> Desktop los rechaza con el error *"Zip cannot contain nested zip files"*.
 
-## 3. Empieza por la base ⭐
+---
 
-Sube y ejecuta **`constructor-de-voz`** primero. Crea los archivos `about-me.md`
+## Opción B — Subir skills una por una
+
+Si prefieres elegir solo algunas skills:
+
+1. En la carpeta [`dist/`](dist/) descarga las skills que quieras
+   (por ejemplo `constructor-de-voz.zip`).
+2. En **Claude Desktop** → **Configuración** → **Capacidades (Capabilities)** →
+   **Skills**, haz clic en **Subir skill** y selecciona el `.zip`.
+3. Repite por cada skill (una skill por archivo).
+
+---
+
+## Empieza por la base ⭐
+
+Ejecuta **`constructor-de-voz`** primero. Crea los archivos `about-me.md`
 y `voice.md` que **todas las demás skills necesitan** para escribir con tu voz.
 
-## 4. Configura las API keys (solo 2 skills)
+## Configura las API keys (solo 2 skills)
 
 La mayoría de las skills funcionan sin configuración. Estas dos necesitan claves
 como variables de entorno:
@@ -35,7 +49,7 @@ como variables de entorno:
 | `evaluador-de-publicaciones` | `APIFY_API_TOKEN` | Leer tu historial de LinkedIn |
 | `guiones-de-reels` | `APIFY_API_TOKEN` + `GOOGLE_AI_API_KEY` | Analizar Reels con Gemini |
 
-## 5. Úsalas
+## Úsalas
 
 Pídele a Claude en español y elegirá la skill correcta:
 

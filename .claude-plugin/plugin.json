@@ -1,0 +1,23 @@
+{
+  "name": "redes-sociales",
+  "displayName": "Skills de Redes Sociales",
+  "version": "1.0.0",
+  "description": "Conjunto completo de skills de Claude para redes sociales en español (LatAm): voz, LinkedIn, Reels de Instagram, miniaturas de YouTube, analíticas y comunidad. 17 skills.",
+  "author": {
+    "name": "Charlie Hills",
+    "url": "https://charliehills.substack.com"
+  },
+  "homepage": "https://github.com/crisedua/redessociales",
+  "repository": "https://github.com/crisedua/redessociales",
+  "license": "MIT",
+  "keywords": [
+    "redes-sociales",
+    "linkedin",
+    "instagram",
+    "reels",
+    "youtube",
+    "contenido",
+    "gemini",
+    "apify"
+  ]
+}
