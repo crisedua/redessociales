@@ -4,11 +4,9 @@
 
 # Skills de Redes Sociales para agentes de IA
 
-El conjunto completo de skills de Claude detrás del sistema de contenido de Charlie Hills. Más de 350k seguidores en LinkedIn, Instagram, Substack, X y YouTube. Más de 100m de visualizaciones al año. Todo funcionando a través de un solo sistema que comienza con el newsletter y fluye hacia todos los demás canales.
+El conjunto completo de skills de Claude detrás del sistema de contenidoa.
 
-Creado por [Charlie Hills](https://charliehills.substack.com). Suscríbete al [newsletter MarTech AI](https://charliehills.substack.com) para recibir análisis semanales de cómo funciona este sistema en la práctica.
 
-**Las contribuciones son bienvenidas.** ¿Encontraste una forma de mejorar una skill? [Abre un PR](https://github.com/charlie947/social-media-skills/pulls). ¿Te topaste con un problema? [Abre un issue](https://github.com/charlie947/social-media-skills/issues).
 
 ## ¿Qué son las Skills?
 
@@ -110,20 +108,22 @@ Haz un fork del repo, reemplaza las reglas de voz por las tuyas y clona tu fork 
 
 ## Uso
 
-Ejecuta `constructor-de-voz` primero. Todas las demás skills necesitan `about-me.md` y `voice.md` para funcionar correctamente.
+Ejecuta `/constructor-de-voz` primero. Todas las demás skills necesitan `about-me.md` y `voice.md` para funcionar correctamente.
 
-Una vez instaladas, pídele a Claude que te ayude con tareas de contenido y elegirá la skill correcta:
+Cada skill se llama con un comando de barra. Escribe `/` en el chat para ver la lista, o escribe el nombre directamente:
 
 ```
-"Construye mi voz" → constructor-de-voz
-"Escríbeme una publicación sobre agentes de IA" → redactor-de-publicaciones
-"Evalúa este borrador frente a mi historial" → evaluador-de-publicaciones
-"Hazme un carrusel a partir de esto" → carrusel-gemini
-"Qué debería publicar esta semana" → investigacion-de-nicho o matriz-de-contenido
-"Convierte este Reel destacado en un guion" → guiones-de-reels
-"Necesito una miniatura para 'Cómo despedí a mi equipo'" → miniatura-de-youtube
-"Escríbeme un comentario fijado" → comentario-fijado
+/constructor-de-voz          → construye tu voz (empieza aquí)
+/redactor-de-publicaciones   → escribe una publicación en tu voz
+/evaluador-de-publicaciones  → evalúa un borrador frente a tu historial
+/carrusel-gemini             → crea un carrusel
+/investigacion-de-nicho      → ideas: qué publicar esta semana
+/guiones-de-reels            → convierte un Reel en un guion
+/miniatura-de-youtube        → crea una miniatura para un video
+/comentario-fijado           → escribe un comentario fijado
 ```
+
+Consulta **[COMO-USAR.md](COMO-USAR.md)** para la guía completa de uso.
 
 ## Categorías de Skills
 
