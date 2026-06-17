@@ -6,6 +6,17 @@ dónde empezar y qué pedir.
 
 ---
 
+> # ⭐ IMPORTANTE: usa Cowork, no un chat normal
+>
+> **Trabaja siempre dentro de un proyecto de Cowork.** Cowork tiene **memoria**:
+> guarda tus archivos (`about-me.md`, `voice.md`) y recuerda tu contexto entre
+> sesiones, así tu voz queda lista para siempre y todas las skills la usan.
+>
+> En un chat normal todo se pierde al cerrarlo, y tendrías que reconstruir tu voz
+> cada vez. 👉 **Crea un proyecto en Cowork y haz ahí todo tu contenido.**
+
+---
+
 ## Paso 1: Construye tu voz (hazlo una sola vez)
 
 Antes que nada, dile a Claude:
