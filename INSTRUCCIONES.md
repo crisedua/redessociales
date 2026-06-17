@@ -1,43 +1,35 @@
 # 📦 Cómo instalar las Skills de Redes Sociales en Claude Desktop
 
-Hay dos formas de instalarlas. La **Opción A (plugin)** es la más rápida porque
-instala las 17 skills de una sola vez.
+Las 17 skills se instalan juntas como **un solo plugin**. Solo necesitas un archivo:
+**`redes-sociales-plugin.zip`**.
 
 ---
 
-## ✅ Opción A — Subir como plugin (recomendada)
+## Instalación
 
-Instala todas las skills juntas con un solo archivo.
-
-1. Descarga **[`dist/redes-sociales-plugin.zip`](dist/redes-sociales-plugin.zip)**
-   desde este repositorio (ábrelo y usa el botón **Download**).
+1. Descarga el archivo **`redes-sociales-plugin.zip`** y guárdalo en tu computadora.
 2. Abre **Claude Desktop** → **Configuración (Settings)** → **Plugins**.
 3. Ve a la pestaña **Local uploads** y haz clic en **+** → **Upload local plugin**.
 4. Selecciona el archivo `redes-sociales-plugin.zip` y haz clic en **Upload**.
 5. Acepta el aviso de confianza. ¡Listo! Las 17 skills quedan disponibles.
 
-> ⚠️ Sube el archivo `redes-sociales-plugin.zip` tal cual. No subas
-> `todas-las-skills.zip` ni un zip que contenga otros zips adentro: Claude
-> Desktop los rechaza con el error *"Zip cannot contain nested zip files"*.
+> ⚠️ Sube el archivo **`redes-sociales-plugin.zip`** tal cual. No subas un zip que
+> contenga otros zips adentro: Claude Desktop los rechaza con el error
+> *"Zip cannot contain nested zip files"*.
 
 ---
 
-## Opción B — Subir skills una por una
+## ⭐ IMPORTANTE: usa Cowork, no un chat normal
 
-Si prefieres elegir solo algunas skills:
-
-1. En la carpeta [`dist/`](dist/) descarga las skills que quieras
-   (por ejemplo `constructor-de-voz.zip`).
-2. En **Claude Desktop** → **Configuración** → **Capacidades (Capabilities)** →
-   **Skills**, haz clic en **Subir skill** y selecciona el `.zip`.
-3. Repite por cada skill (una skill por archivo).
-
----
+Trabaja siempre dentro de un proyecto de **Cowork**. Cowork tiene **memoria**:
+guarda tus archivos (`about-me.md`, `voice.md`) y recuerda tu contexto entre
+sesiones, así tu voz queda lista para siempre. En un chat normal todo se pierde
+al cerrarlo.
 
 ## Empieza por la base ⭐
 
-Ejecuta **`constructor-de-voz`** primero. Crea los archivos `about-me.md`
-y `voice.md` que **todas las demás skills necesitan** para escribir con tu voz.
+Pide **"construye mi voz"** primero. Crea los archivos `about-me.md` y `voice.md`
+que **todas las demás skills necesitan** para escribir con tu voz.
 
 ## Configura las API keys (solo 2 skills)
 
@@ -49,18 +41,10 @@ como variables de entorno:
 | `evaluador-de-publicaciones` | `APIFY_API_TOKEN` | Leer tu historial de LinkedIn |
 | `guiones-de-reels` | `APIFY_API_TOKEN` + `GOOGLE_AI_API_KEY` | Analizar Reels con Gemini |
 
-## Úsalas
+---
 
-Pídele a Claude en español y elegirá la skill correcta:
-
-- *"Construye mi voz"* → `constructor-de-voz`
-- *"Escríbeme una publicación sobre IA"* → `redactor-de-publicaciones`
-- *"Evalúa este borrador frente a mi historial"* → `evaluador-de-publicaciones`
-- *"Hazme un carrusel a partir de esto"* → `carrusel-gemini`
-- *"Qué debería publicar esta semana"* → `investigacion-de-nicho` o `matriz-de-contenido`
-- *"Convierte este Reel destacado en un guion"* → `guiones-de-reels`
-- *"Necesito una miniatura para mi video"* → `miniatura-de-youtube`
-- *"Escríbeme un comentario fijado"* → `comentario-fijado`
+> 🚀 ¿Listo para usarlas? Mira **[COMO-USAR.md](COMO-USAR.md)**.
+> 🤔 ¿Quieres saber qué es esto? Mira **[QUE-ES.md](QUE-ES.md)**.
 
 ## Lista completa de skills
 
