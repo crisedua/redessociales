@@ -28,9 +28,9 @@ Está pensado para el mercado de habla hispana: todo está en español.
    cómo escribes. Claude aprende tu tono, tus temas y tu estilo.
 2. **Todo lo demás sale de ahí.** Cada vez que pides una publicación, un guion o
    una idea, Claude usa tu voz para que el resultado suene auténtico.
-3. **Tú solo pides.** Le hablas en español con frases como *"escríbeme una
-   publicación sobre…"* o *"hazme un carrusel"*, y Claude elige la herramienta
-   correcta.
+3. **Tú solo la llamas.** Escribe `/` en el chat para ver tus skills y elige la
+   que necesitas (por ejemplo `/redactor-de-publicaciones` o `/carrusel-gemini`).
+   Le das el detalle y Claude crea el contenido en tu voz.
 
 ## ¿Qué lo hace diferente?
 
